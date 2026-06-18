@@ -12,11 +12,9 @@ export default function Navbar({ isDarkMode, onToggleDarkMode }) {
             </div>
             <div>
               <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-                Study Notes
+                Study Notes Generator
               </span>
-              <span className="ml-1.5 rounded-full bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-800 dark:bg-blue-900/40 dark:text-blue-300">
-                AI Edition
-              </span>
+              
             </div>
           </div>
 

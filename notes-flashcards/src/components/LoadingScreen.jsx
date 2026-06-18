@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiCheck, FiLoader } from "react-icons/fi";
 
 const stepsList = [
-  "Reading and parsing document...",
+  "Reading the document...",
   "Analyzing text content & context...",
   "Synthesizing revision metrics with Gemini...",
   "Structuring flashcards and multiple-choice questions...",
@@ -43,10 +43,10 @@ export default function LoadingScreen({ currentStep = 0 }) {
           </div>
 
           <h3 className="mt-6 text-lg font-bold text-slate-900 dark:text-white">
-            Forging Study Materials
+            Checking the Study Materials
           </h3>
           <p className="mt-1 text-sm text-center text-gray-500 dark:text-slate-400 px-4">
-            Our AI model is building your personalized practice deck.
+            The model is building your personalized practice deck.
           </p>
 
           {/* Dynamic Message Box */}
