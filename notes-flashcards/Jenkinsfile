@@ -2,21 +2,28 @@ pipeline {
     agent any
 
     stages {
+
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                dir('notes-flashcards') {
+                    sh 'npm install'
+                }
             }
         }
 
         stage('Build App') {
             steps {
-                sh 'npm run build'
+                dir('notes-flashcards') {
+                    sh 'npm run build'
+                }
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t flashcards-app .'
+                dir('notes-flashcards') {
+                    sh 'docker build -t flashcards-app .'
+                }
             }
         }
 
