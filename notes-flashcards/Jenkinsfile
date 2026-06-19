@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Build App') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t flashcards-app .'
+            }
+        }
+
+        stage('Run Container') {
+            steps {
+                sh '''
+                docker stop flashcards || true
+                docker rm flashcards || true
+                docker run -d --name flashcards -p 8081:80 flashcards-app
+                '''
+            }
+        }
+    }
+}
