@@ -43,33 +43,33 @@ export default function Flashcard({
         }`}
       >
         {/* Front Side */}
-        <div className="absolute inset-0 backface-hidden flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-6 shadow-md dark:border-slate-800 dark:bg-slate-900 transition-colors duration-300">
+        <div className="absolute inset-0 backface-hidden flex flex-col justify-between rounded-3xl border border-white/20 bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 p-7 text-white shadow-2xl shadow-blue-500/30 transition-all duration-300 hover:scale-[1.02]">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-slate-500">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-200">
               Question
             </span>
             {getConfidenceBadge()}
           </div>
           <div className="flex flex-1 items-center justify-center text-center px-4">
-            <h3 className="text-lg sm:text-xl font-bold leading-relaxed text-slate-800 dark:text-white">
+            <h3 className="text-2xl sm:text-3xl font-bold leading-relaxed text-white">
               {question}
             </h3>
           </div>
-          <div className="text-center text-xs text-gray-400 dark:text-slate-550 select-none">
+          <div className="text-center text-sm text-blue-100 select-none opacity-90">
             Click card to flip and view answer
           </div>
         </div>
 
         {/* Back Side */}
-        <div className="absolute inset-0 backface-hidden rotate-y-180 flex flex-col justify-between rounded-2xl border border-gray-200 bg-slate-50 p-6 shadow-md dark:border-slate-800 dark:bg-slate-850 transition-colors duration-300">
+        <div className="absolute inset-0 backface-hidden rotate-y-180 flex flex-col justify-between rounded-3xl border border-white/10 bg-gradient-to-br from-violet-600 via-indigo-700 to-slate-900 p-7 text-white shadow-2xl shadow-indigo-500/30 transition-all duration-300">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-slate-500">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-violet-200">
               Answer
             </span>
             {getConfidenceBadge()}
           </div>
           <div className="flex flex-1 items-center justify-center text-center overflow-y-auto px-4 my-2">
-            <p className="text-base sm:text-lg leading-relaxed text-slate-800 dark:text-slate-200">
+            <p className="text-lg sm:text-xl leading-relaxed text-white">
               {answer}
             </p>
           </div>
